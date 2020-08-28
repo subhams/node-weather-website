@@ -31,7 +31,7 @@ weatherForm.addEventListener('submit', (e) =>{
     const msgOne = document.querySelector('#msg1')
     const msgTwo = document.querySelector('#msg2')
     
-    fetch('http://localhost:3000/index/?address='+location).then((response)=>{
+    fetch('/index/?address='+location).then((response)=>{
     response.json().then((data)=>{
         if(data.error){
             msgOne.textContent = data.error
